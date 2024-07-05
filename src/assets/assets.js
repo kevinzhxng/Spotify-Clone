@@ -117,66 +117,66 @@ export const albumsData = [
 export const songsData = [
     {
         id:0,
-        name: "Song One",
+        name: "Song 1",
         image: img1,
         file:song1,
-        desc:"Put a smile on your face with these happy tunes",
+        desc:"Artist",
         duration:"3:00"
     },
     {
         id:1,
-        name: "Song Two",
+        name: "Song 2",
         image: img2,
         file:song2,
-        desc:"Put a smile on your face with these happy tunes",
+        desc:"Artist",
         duration:"2:20"
     },
     {
         id:2,
-        name: "Song Three",
+        name: "Song 3",
         image: img3,
         file:song3,
-        desc:"Put a smile on your face with these happy tunes",
+        desc:"Artist",
         duration:"2:32"
     },
     {
         id:3,
-        name: "Song Four",
+        name: "Song 4",
         image: img4,
         file:song1,
-        desc:"Put a smile on your face with these happy tunes",
+        desc:"Artist",
         duration:"2:50"
     },
     {
         id:4,
-        name: "Song Five",
+        name: "Song 5",
         image: img5,
         file:song2,
-        desc:"Put a smile on your face with these happy tunes",
+        desc:"Artist",
         duration:"3:10"
     },
     {
         id:5,
-        name: "Song Six",
+        name: "Song 6",
         image: img14    ,
         file:song3,
-        desc:"Put a smile on your face with these happy tunes",
+        desc:"Artist",
         duration:"2:45"
     },
     {
         id:6,
-        name: "Song Seven",
+        name: "Song 7",
         image: img7,
         file:song1,
-        desc:"Put a smile on your face with these happy tunes",
+        desc:"Artist",
         duration:"2:18"
     },
     {
         id:7,
-        name: "Song Eight",
+        name: "Song 8",
         image: img12,
         file:song2,
-        desc:"Put a smile on your face with these happy tunes",
+        desc:"Artist",
         duration:"2:35"
     }
 ]

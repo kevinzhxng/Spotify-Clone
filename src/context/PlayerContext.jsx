@@ -53,6 +53,13 @@ const PlayerContextProvider = (props) => {
     }
   }
 
+  const random = async() => {
+    const rid = Math.floor(Math.random()*8)
+    await setTrack(songsData[rid])
+    await audioRef.current.play()
+    setPlayStatus(true)
+  }
+
   const seekSong = async(e) => {
     audioRef.current.currentTime = ((e.nativeEvent.offsetX / seekBg.current.offsetWidth) * audioRef.current.duration)
   }
@@ -85,7 +92,8 @@ const PlayerContextProvider = (props) => {
     play, pause,
     playWithId,
     previous, next,
-    seekSong
+    seekSong,
+    random
   };
 
   return (

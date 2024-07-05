@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 import { PlayerContext } from "../context/PlayerContext";
 
 export default function Player() {
-  const { track, seekBar, seekBg, playStatus, play, pause, time, previous, next, seekSong } =
+  const { track, seekBar, seekBg, playStatus, play, pause, time, previous, next, seekSong, random } =
     useContext(PlayerContext);
 
   return (
@@ -18,28 +18,29 @@ export default function Player() {
       <div className="flex flex-col items-center gap-1 m-auto">
         <div className="flex gap-4">
           <img
-            className="w-4 cursor-pointer"
+            onClick={random} 
+            className="w-4 cursor-pointer hover:opacity-50"
             src={assets.shuffle_icon}
             alt=""
           />
-          <img onClick={previous} className="w-4 cursor-pointer" src={assets.prev_icon} alt="" />
+          <img onClick={previous} className="w-4 cursor-pointer hover:opacity-50" src={assets.prev_icon} alt="" />
           {playStatus ? (
             <img
               onClick={pause}
-              className="w-4 cursor-pointer"
+              className="w-4 cursor-pointer hover:opacity-50"
               src={assets.pause_icon}
               alt=""
             />
           ) : (
             <img
               onClick={play}
-              className="w-4 cursor-pointer"
+              className="w-4 cursor-pointer hover:opacity-50"
               src={assets.play_icon}
               alt=""
             />
           )}
-          <img onClick={next} className="w-4 cursor-pointer" src={assets.next_icon} alt="" />
-          <img className="w-4 cursor-pointer" src={assets.loop_icon} alt="" />
+          <img onClick={next} className="w-4 cursor-pointer hover:opacity-50" src={assets.next_icon} alt="" />
+          <img className="w-4 cursor-not-allowed hover:opacity-50" src={assets.loop_icon} alt="" />
         </div>
         <div className="flex items-center gap-5">
           <p>{time.currentTime.minute}:{time.currentTime.second}</p>
@@ -57,14 +58,14 @@ export default function Player() {
         </div>
       </div>
       <div className="hidden lg:flex items-center gap-2 opacity-75">
-        <img className="w-4" src={assets.plays_icon} alt="" />
-        <img className="w-4" src={assets.mic_icon} alt="" />
-        <img className="w-4" src={assets.queue_icon} alt="" />
-        <img className="w-4" src={assets.speaker_icon} alt="" />
-        <img className="w-4" src={assets.volume_icon} alt="" />
+        <img className="w-4 cursor-not-allowed" src={assets.plays_icon} alt="" />
+        <img className="w-4 cursor-not-allowed" src={assets.mic_icon} alt="" />
+        <img className="w-4 cursor-not-allowed" src={assets.queue_icon} alt="" />
+        <img className="w-4 cursor-not-allowed" src={assets.speaker_icon} alt="" />
+        <img className="w-4 cursor-not-allowed" src={assets.volume_icon} alt="" />
         <div className="w-20 bg-slate-50 h-1 rounded"></div>
-        <img className="w-4" src={assets.mini_player_icon} alt="" />
-        <img className="w-4" src={assets.zoom_icon} alt="" />
+        <img className="w-4 cursor-not-allowed" src={assets.mini_player_icon} alt="" />
+        <img className="w-4 cursor-not-allowed" src={assets.zoom_icon} alt="" />
       </div>
     </div>
   );
